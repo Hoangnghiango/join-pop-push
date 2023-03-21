@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert dashes (-) between even numbers</title>
+</head>
+
+<body>
+    <!-- Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) 
+        giữa 2  số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương
+         trình sẽ là 0-254-6-8. -->
+    <script>
+        let input = Number(prompt("Nhap so: "));
+        const num = window.prompt();
+        const str = num.toString();
+        const result = [str[0]];
+
+        for (let x = 1; x < str.length; x++) {
+            if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
+                result.push('-', str[x]);
+            }
+            else {
+                result.push(str[x]);
+            }
+        }
+        console.log(result.join(''));
+
+
+    </script>
+</body>
+
+</html>
